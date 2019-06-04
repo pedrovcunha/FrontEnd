@@ -20,7 +20,7 @@ namespace FrontEnd.Pages.Sale
 
         public IActionResult OnGet()
         {
-        ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Description");
+        //ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Description");
         ViewData["RetailStoreId"] = new SelectList(_context.RetailStores, "Id", "Name");
         ViewData["SalesRepresentativeId"] = new SelectList(_context.People, "Id", "FirstName");
             return Page();

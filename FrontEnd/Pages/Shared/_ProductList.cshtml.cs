@@ -22,7 +22,6 @@ namespace FrontEnd.Pages.Shared
         {
             var products = _context.Products;
             ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Description");
-            ViewData[]
             return Page();
         }
 
