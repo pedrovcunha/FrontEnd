@@ -1,0 +1,11 @@
+﻿@page
+@model FrontEnd.Pages.Shared._ProductListModel
+@{
+    ViewData["Title"] = "_ProductList";
+}
+<div class="form-group">
+    <label asp-for="Products.Description" class="control-label"></label>
+    <select asp-for="Products.Id" class="form-control" asp-items="ViewBag.ProductId"></select>
+    <label asp-for="Products.Price" class="control-label"></label>
+    <label class="control-label">ViewBag.Price</label>
+</div>

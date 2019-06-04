@@ -1,0 +1,61 @@
+﻿@page
+@model FrontEnd.Pages.Sale.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Sales</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sales.OrderDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sales.OrderDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sales.TotalPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sales.TotalPrice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sales.Comission)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sales.Comission)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sales.Quantity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sales.Quantity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sales.Product)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sales.Product.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sales.RetailStore)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sales.RetailStore.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sales.SalesRepresentative)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sales.SalesRepresentative.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Sales.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
