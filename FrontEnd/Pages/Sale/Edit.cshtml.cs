@@ -32,15 +32,16 @@ namespace FrontEnd.Pages.Sale
             Sales = await _context.Sales
                 .Include(s => s.Product)
                 .Include(s => s.RetailStore)
-                .Include(s => s.SalesRepresentative).FirstOrDefaultAsync(m => m.Id == id);
+                .Include(s => s.SalesRepresentative)
+                .Include(s => s.SalesRepresentative.Person).FirstOrDefaultAsync(m => m.Id == id);
 
             if (Sales == null)
             {
                 return NotFound();
             }
-           ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Id");
-           ViewData["RetailStoreId"] = new SelectList(_context.RetailStores, "Id", "Id");
-           ViewData["SalesRepresentativeId"] = new SelectList(_context.SalesRepresentatives, "Id", "Id");
+           ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Description");
+           ViewData["RetailStoreId"] = new SelectList(_context.RetailStores, "Id", "Name");
+           ViewData["SalesRepresentativeId"] = new SelectList(_context.SalesRepresentatives.Include(s => s.Person), "Id", "FullName");
             return Page();
         }
 

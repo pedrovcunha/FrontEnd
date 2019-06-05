@@ -8,7 +8,7 @@ namespace FrontEnd.Models
         public int Id { get; set; }
         public int? SalesRepresentativeId { get; set; }
         public int? RetailStoreId { get; set; }
-        public DateTime? OrderDate { get; set; }
+        public DateTime OrderDate { get; set; }
         public decimal? TotalPrice { get; set; }
         public decimal? Comission { get; set; }
         public int? ProductId { get; set; }

@@ -25,7 +25,8 @@ namespace FrontEnd.Pages.Sale
             Sales = await _context.Sales
                 .Include(s => s.Product)
                 .Include(s => s.RetailStore)
-                .Include(s => s.SalesRepresentative).ToListAsync();
+                .Include(s => s.SalesRepresentative)
+                .Include(s => s.SalesRepresentative.Person).ToListAsync();
         }
     }
 }

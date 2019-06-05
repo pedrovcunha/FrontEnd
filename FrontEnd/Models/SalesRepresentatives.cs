@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FrontEnd.Models
 {
@@ -16,10 +17,16 @@ namespace FrontEnd.Models
         public string JobTitle { get; set; }
         public int? PromotionAgencyId { get; set; }
         public int? RetailStoreId { get; set; }
+        [NotMapped]
+        public string FullName { get {
+                return Person.FullName;
+            }
 
+        }
         public PromotionalAgencies PromotionAgency { get; set; }
         public RetailStores RetailStore { get; set; }
         public ICollection<Orders> Orders { get; set; }
         public ICollection<Sales> Sales { get; set; }
+        public People Person { get; set; }
     }
 }

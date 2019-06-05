@@ -5,13 +5,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Sale's Report List</h2>
 
 <p>
     <a asp-page="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
+
+<table class="table table-responsive{-sm|-md|-lg|-xl}">
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Sales[0].OrderDate)
@@ -53,13 +54,13 @@
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Product.Id)
+                @Html.DisplayFor(modelItem => item.Product.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RetailStore.Id)
+                @Html.DisplayFor(modelItem => item.RetailStore.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SalesRepresentative.Id)
+                @Html.DisplayFor(modelItem => item.SalesRepresentative.Person.FullName)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

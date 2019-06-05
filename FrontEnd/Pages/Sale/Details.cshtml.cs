@@ -30,7 +30,8 @@ namespace FrontEnd.Pages.Sale
             Sales = await _context.Sales
                 .Include(s => s.Product)
                 .Include(s => s.RetailStore)
-                .Include(s => s.SalesRepresentative).FirstOrDefaultAsync(m => m.Id == id);
+                .Include(s => s.SalesRepresentative)
+                .Include(s => s.SalesRepresentative.Person).FirstOrDefaultAsync(m => m.Id == id);
 
             if (Sales == null)
             {

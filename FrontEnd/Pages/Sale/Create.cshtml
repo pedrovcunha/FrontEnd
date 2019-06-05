@@ -5,6 +5,16 @@
     ViewData["Title"] = "Create";
 }
 
+    <script type="text/javascript">
+    function setProductPrice(event) {
+        
+        var selectElement = event.target;
+
+        var value = selectElement.value;
+        document.getElementById("productPrice").value = @ViewBag.;
+    
+}
+    </script>
 <h2>Create</h2>
 
 <h4>Sales</h4>
@@ -23,7 +33,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="Sales.ProductId" class="control-label"></label>
-                <select asp-for="Sales.ProductId" class="form-control" asp-items="ViewBag.ProductId"></select>
+                <select asp-for="Sales.ProductId" class="form-control" asp-items="ViewBag.ProductId" onchange="setProductPrice" ></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Unit Price</label>
+                <text id="productPrice"></text>
             </div>
             <div class="form-group">
                 <label asp-for="Sales.Quantity" class="control-label"></label>
@@ -37,7 +51,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Sales.TotalPrice" class="control-label"></label>
-                <input asp-for="Sales.TotalPrice" class="form-control" disabled="disabled" />
+                <input asp-for="Sales.TotalPrice" class="form-control" disabled="disabled" id="totalPrice" />
                 <span asp-validation-for="Sales.TotalPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -47,14 +61,17 @@
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-primary btn-block" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <div class="form-group container">
+        <a asp-page="Index">Back to List</a>
+    </div>
+    
 </div>
 
 @section Scripts {
