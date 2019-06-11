@@ -4,93 +4,193 @@
     ViewData["Title"] = "Home page";
 }
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
+@*<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        Learn how to build ASP.NET apps that can run anywhere.
+                        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        There are powerful new features in Visual Studio for building modern web apps.
+                        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="~/images/banner3.svg" alt="Microsoft Azure" class="img-responsive" />
+                <div class="carousel-caption" role="option">
+                    <p>
+                        Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
+                        <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core Razor Pages</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
+    <div class="row">
+        <div class="col-md-3">
+            <h2>Application uses</h2>
+            <ul>
+                <li>Sample pages using ASP.NET Core Razor Pages</li>
+                <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2>How to</h2>
+            <ul>
+                <li><a href="https://go.microsoft.com/fwlink/?linkid=852130">Working with Razor Pages.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2>Overview</h2>
+            <ul>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h2>Run &amp; Deploy</h2>
+            <ul>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure App Service</a></li>
+            </ul>
+        </div>
+    </div>*@
+
+<section class="hero-section">
+    <div class="hero-slider owl-carousel">
+        <div class="hs-item set-bg sp-pad" data-setbg="~/images/hero-slider/1.jpg">
+            <div class="hs-text">
+                <h2 class="hs-title">Halo</h2>
+                <p class="hs-des">We Create Awesome <br>Photographies and more</p>
+            </div>
+        </div>
+        <div class="hs-item set-bg sp-pad" data-setbg="~/images/hero-slider/2.jpg">
+            <div class="hs-text">
+                <h2 class="hs-title">Halo</h2>
+                <p class="hs-des">We Create Awesome <br>Photographies and more</p>
+            </div>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?linkid=852130">Working with Razor Pages.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
+</section>
+<!-- Hero section end -->
+<!-- Intro section start -->
+<section class="intro-section sp-pad spad">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-4 intro-text">
+                <span class="sp-sub-title">Amazing Sales Management</span>
+                <h3 class="sp-title">We are the king of sales.</h3>
+                <p>Sales Tracker is a simple tool to help you keep track of all your sales, products and consolidate all into daily reports.</p>
+                <a href="#" class="site-btn">Read More</a>
+            </div>
+            <div class="col-xl-7 offset-xl-1">
+                <figure class="intro-img mt-5 mt-xl-0">
+                    <img src="~/images/review-bg.jpg" alt="">
+                </figure>
+            </div>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
+</section>
+<!-- Intro section end -->
+<!-- Portfolio section start -->
+<section class="portfolio-section">
+    <div class="portfolio-warp">
+        <!-- single item -->
+        <div class="single-portfolio set-bg" data-setbg="~/images/portfolio/1.jpg">
+            <a href="single-work.html" class="portfolio-info">
+                <div class="pfbg set-bg" data-setbg="~/images/portfolio/1.jpg"></div>
+                <h5>Summer in the desert</h5>
+                <p>Landscape Photography</p>
+            </a>
+        </div>
+        <!-- single item -->
+        <div class="single-portfolio set-bg" data-setbg="~/images/portfolio/2.jpg">
+            <a href="single-work.html" class="portfolio-info">
+                <div class="pfbg set-bg" data-setbg="~/images/portfolio/2.jpg"></div>
+                <h5>Summer in the desert</h5>
+                <p>Landscape Photography</p>
+            </a>
+        </div>
+        <!-- single item -->
+        <div class="single-portfolio set-bg" data-setbg="~/images/portfolio/3.jpg">
+            <a href="single-work.html" class="portfolio-info">
+                <div class="pfbg set-bg" data-setbg="~/images/portfolio/3.jpg"></div>
+                <h5>Summer in the desert</h5>
+                <p>Landscape Photography</p>
+            </a>
+        </div>
+        <!-- single item -->
+        <div class="single-portfolio sm-wide set-bg" data-setbg="~/images/portfolio/4.jpg">
+            <a href="single-work.html" class="portfolio-info">
+                <div class="pfbg set-bg" data-setbg="~/images/portfolio/4.jpg"></div>
+                <h5>Summer in the desert</h5>
+                <p>Landscape Photography</p>
+            </a>
+        </div>
+        <!-- single item -->
+        <div class="single-portfolio sm-wide set-bg " data-setbg="~/images/portfolio/5.jpg">
+            <a href="single-work.html" class="portfolio-info">
+                <div class="pfbg set-bg" data-setbg="~/images/portfolio/5.jpg"></div>
+                <h5>Summer in the desert</h5>
+                <p>Landscape Photography</p>
+            </a>
+        </div>
+        <!-- single item -->
+        <div class="single-portfolio set-bg" data-setbg="~/images/portfolio/6.jpg">
+            <a href="single-work.html" class="portfolio-info">
+                <div class="pfbg set-bg" data-setbg="~/images/portfolio/6.jpg"></div>
+                <h5>Summer in the desert</h5>
+                <p>Landscape Photography</p>
+            </a>
+        </div>
+        <!-- single item -->
+        <div class="single-portfolio sm-wide md-w-100 set-bg " data-setbg="~/images/portfolio/7.jpg">
+            <a href="single-work.html" class="portfolio-info">
+                <div class="pfbg set-bg" data-setbg="~/images/portfolio/7.jpg"></div>
+                <h5>Summer in the desert</h5>
+                <p>Landscape Photography</p>
+            </a>
+        </div>
     </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure App Service</a></li>
-        </ul>
-    </div>
-</div>
+    <div class="clearfix"></div>
+</section>
+<!-- Portfolio section end -->

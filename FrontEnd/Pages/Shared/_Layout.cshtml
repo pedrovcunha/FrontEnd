@@ -1,45 +1,192 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FrontEnd</title>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Sales Tracker</title>
+        @*<meta name="description" content="Sales Tracker">*@
+        <meta name="keywords" content="photography, portfolio, onepage, creative, html">
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+        <!-- Favicon -->
+        <link href="~/images/favicon.ico" rel="shortcut icon" />
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Stylesheets -->
+        <
+
+        <environment include="Development">
+            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+            <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+            <link rel="stylesheet" href="~/css/flaticon.css" />
+            <link rel="stylesheet" href="~/css/animate.css" />
+            <link rel="stylesheet" href="~/css/owl.carousel.css" />
+            <link rel="stylesheet" href="~/css/style.css" />
+        </environment>
+        <environment exclude="Development">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        </environment>
+    </head>
+    <body>
+        <!-- Page Preloder -->
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+
+        <!-- Header section start -->
+        <header class="header-section sp-pad">
+            <h3 class="site-logo">Sales Tracker</h3>
+            <form class="search-top">
+                <button class="se-btn"><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="Search.....">
+            </form>
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+            </div>
+            <nav class="navbar navbar-inverse navbar-fixed-top main-menu">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a asp-page="/Index" class="navbar-brand">FrontEnd</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a asp-page="/Sale/Index">Sale</a></li>
+                            <li><a asp-page="/Product/Index">Products Available</a></li>
+                            <li><a asp-page="/SaleRepresentative/Index">Sale Representatives</a></li>
+                            <li><a asp-page="/About">About</a></li>
+                            <li><a asp-page="/Contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Sales Tracker section start -->
+        <section class="hero-section">
+            <div class="hero-slider owl-carousel">
+                <div class="hs-item set-bg sp-pad" data-setbg="~/images/hero-slider/1.jpg">
+                    <div class="hs-text">
+                        <h2 class="hs-title">Sales Tracker</h2>
+                        <p class="hs-des">Track all your sales in just a few steps.<br>Sales Management and more.</p>
+                    </div>
+                </div>
+                <div class="hs-item set-bg sp-pad" data-setbg="~/images/hero-slider/2.jpg">
+                    <div class="hs-text">
+                        <h2 class="hs-title">Sales Tracker</h2>
+                        <p class="hs-des">Track all your sales in just a few steps.<br>Sales Management and more.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero section end -->
+
+        <partial name="_CookieConsentPartial" />
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; 2019 - FrontEnd</p>
+            </footer>
+        </div>
+
+        <environment include="Development">
+            <script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>
+            <script src="~/js/main.js" asp-append-version="true"></script>
+            <script src="~/js/circle-progress.min.js" asp-append-version="true"></script>
+            <script src="~/js/jquery-3.2.1.min.js"></script>
+            <script src="~/js/map.js" asp-append-version="true"></script>
+            <script src="~/js/mixitup.min.js" asp-append-version="true"></script>
+            <script src="~/js/owl.carousel.min.js" asp-append-version="true"></script>
+            <script src="~/js/bootstrap.min.js"></script>
+        </environment>
+        <environment exclude="Development">
+            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+            </script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>
+        </environment>
+
+        @RenderSection("Scripts", required: false)
+    </body>
+    </html>
+
+@*<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sales Tracker</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sales Tracker Front End">
+    <meta name="keywords" content="photography, portfolio, onepage, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="shortcut icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/flaticon.css" />
+    <link rel="stylesheet" href="~/css/animate.css" />
+    <link rel="stylesheet" href="~/css/owl.carousel.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-page="/Index" class="navbar-brand">FrontEnd</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-page="/Sale/Index">Sale</a></li>
-                    <li><a asp-page="/Product/Index">Products Available</a></li>
-                    <li><a asp-page="/SaleRepresentative/Index">Sale Representatives</a></li>
-                    @*<li><a asp-page="/About">About</a></li>
-                    <li><a asp-page="/Contact">Contact</a></li>*@
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
 
+    <!-- Header section start -->
+    <header class="header-section sp-pad">
+        <h3 class="site-logo">Sales Tracker</h3>
+        <form class="search-top">
+            <button class="se-btn"><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="Search.....">
+        </form>
+        <div class="nav-switch">
+            <i class="fa fa-bars"></i>
+        </div>
+        <nav class="main-menu">
+            <ul>
+                <li><a asp-page="/Sale/Index">Sale</a></li>
+                <li><a asp-page="/Product/Index">Products Available</a></li>
+                <li><a asp-page="/SaleRepresentative/Index">Sale Representatives</a></li>
+                <li><a asp-page="/About">About</a></li>
+                <li><a asp-page="/Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <partial name="_CookieConsentPartial" />
 
     <div class="container body-content">
@@ -49,28 +196,6 @@
             <p>&copy; 2019 - FrontEnd</p>
         </footer>
     </div>
-
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
-
-    @RenderSection("Scripts", required: false)
 </body>
 </html>
+    <!-- Header section end -->*@
